@@ -1,50 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Landing Page</title>
-    <link rel="stylesheet" href="prodigy.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">MyBrand</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Welcome to MyBrand</h1>
-            <p>Your success is our priority</p>
-            <button>Learn More</button>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a company dedicated to providing the best services.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We offer a variety of services to meet your needs.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us today.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 MyBrand. All rights reserved.</p>
-    </footer>
-    <script src="prodigy.js"></script>
-</body>
-</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        padding: 15px;
+        border-top: 1px solid #555;
+        text-align: center;
+    }
+    
+    .nav-links li:first-child {
+        border-top: none;
+    }
+    
+    .burger {
+        display: block;
+    }
+}
